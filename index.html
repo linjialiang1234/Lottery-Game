@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>Lottery Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-app="mainApp" ng-controller="lotteryController" ng-init="load()">
+
+    <div class="contianer">
+            <div class="main-container">
+                    <form class="input-list" name="inputList" novalidate>
+                            <div class="input-list-container">
+                                    <div class="list-container" id="input-name">
+                                            <label for="name">Name</label>
+                                            <input type="text" name="name" id="name" ng-model="name">
+                                            <!-- <span style="color:red" ng-show="!name">The name is required.</span> -->
+                                    </div>
+                                    <br>
+                                
+                                    <div class="list-container" id="input-percentage">
+                                        <label for="percentage">Percentage</label>
+                                        <input type="number" name="percentage" id="percentage" ng-model="percentage">
+                                        <!-- <span style="color:red" ng-show="inputList.percentage.$error.number">Valid percentage is required.</span> -->
+                        
+                                    </div>
+                                    <br>
+                            
+                                    <div class="list-container" id="input-color">
+                                        <label for="color">Color</label>
+                                        <input type="text" name="color" id="color" ng-model="color">
+
+                                        <!-- <input type="text" name="color" id="color" ng-model="color"> -->
+                                        <!-- <select ng-model="colorChosen" name="selectedColor "ng-options="color.name for color in colors" required>
+                                            <option value="">Select Color</option> 
+                        
+                                        </select> -->
+                                        <!-- <span style="color:red" ng-show="inputList.selectedColor.$error.required">Select color is required.</span> -->
+                        
+                                    </div>
+                                    <br>
+                        
+                            </div>
+                            
+                            <div class="button-container">
+                                <button type"button" ng-click="addItem()">Add</button>
+                            </div>
+                        </form>
+                                
+                        <output-list></output-list>
+                
+            </div>
+        
+            <!-- <input-list></input-list> -->
+           
+            <div class="game-container">
+                <div id="turntable" class="hidden-turntable">
+                    <div class="turntable-content">
+                        <canvas id="canvas" width="300" height="300">Sorry, this browser do not support it.</canvas>
+                        <a id="btn" class="hidden-turntable" href="javascript:;" ng-click="rotatePieChart()">Go</a>
+                    </div>
+
+                    
+                </div>
+            
+                <div class="winner-container">
+                    <span class="winner-text hidden-winner-text" id="winner">The winner is {{winner}}</span>
+                </div>
+
+            </div>
+    </div>
+
+   
+
+    <script src="mainApp.js"></script>
+    <script src="lotteryController.js"></script>
+</body>
+</html>

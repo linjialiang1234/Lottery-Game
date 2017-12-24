@@ -1,0 +1,188 @@
+
+.contianer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: 20px auto;
+    background: url(background2.jpg)
+
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    /* background: url(background2.jpg); */
+    /* opacity: 0.85; */
+    height: 550px;
+    border-right: 2px solid whitesmoke;
+}
+.input-list{
+    border-bottom: 2px solid whitesmoke;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    width: 95%;
+}
+
+.input-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: space-around;
+    /* flex-basis: 10%; */
+
+}
+
+.list-container input{
+    box-shadow: 5px 5px 8px whitesmoke;
+}
+/* #list-container:hover {
+    flex-basis: 25%;
+    /* transform: scale(1.5, 1.5); */
+
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    border-radius: 15px;
+    width: 15%;
+    height: 30px;
+    background-color: #80bbea;
+    border: 1.5px solid white;
+    box-shadow: 5px 5px 8px whitesmoke;
+    transition: transform 1s;
+    /* transition: height 1s; */ 
+
+}
+
+.button-container button:hover {
+    /* width: 20%;
+    height: 35px; */
+    transform: scale(1.2,1.2);
+
+}
+.game-container{
+    /* border:1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 40%;  
+    /* background: url(background2.jpg); */
+}
+
+/* .game-container:hover {
+    flex-basis: 40%;
+} */
+
+.output-list{
+    /* border: 1px solid black; */
+    width: 50%;
+    align-self: center;
+}
+
+.single-output{
+    margin: 10px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 8px;
+}
+
+.single-output button{
+    border-radius: 15px;
+    width: 30%;
+    height: 30px;
+    background-color: #80bbea;
+    border: 1.5px solid white;
+    box-shadow: 5px 5px 8px whitesmoke;
+    transition: width 1s;
+}
+
+.single-output button:hover {
+    width: 35%;
+}
+
+#turntable{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hidden-turntable{
+    visibility: hidden;
+}
+#canvas{
+    /* border: 1px solid #000; */
+    -webkit-transform: all 6s ease;
+    transition: all 6s ease;    
+}
+#btn{
+    position: absolute;
+    left: 213px;
+    top: 120px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+#btn:after{
+    position: absolute;
+    display: block;
+    content: '';
+    left: 10px;
+    top: -32px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #fff; 
+}
+
+.winner-container {
+    /* border: 1px solid black; */
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden-winner-text {
+    visibility: hidden;
+}
+.winner-text{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
