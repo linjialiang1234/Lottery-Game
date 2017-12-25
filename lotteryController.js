@@ -11,12 +11,21 @@ mainApp.controller('lotteryController', function($scope) {
 
         drawPieChart();
 
+        // showElement("turntable", "hidden-turntable")();
+        // showElement("btn", "hidden-turntable")();
+
         var elementTurnTable = document.getElementById("turntable");
         elementTurnTable.classList.remove("hidden-turntable");
 
         var elementLinkButton = document.getElementById("btn");
         elementLinkButton.classList.remove("hidden-turntable");
     } 
+
+        // showElement = function(idOfElement,classOfElement) {
+        //     var elementTurnTable = document.getElementById(idOfElement);
+        //     elementTurnTable.classList.remove(classOfElement);
+
+        // }
 
     getAllInputPercentage = function() {
         var totalInputPercentage = 0;
