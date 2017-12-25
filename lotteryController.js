@@ -82,12 +82,25 @@ mainApp.controller('lotteryController', function($scope) {
         }
     }
 
+    var result = 0;
+    var counter = 0;
     $scope.rotatePieChart = function() {
-        canvas.style.transform = 'rotate(-' + randomRotateDegree() +'deg)'; 
+        var element = document.getElementById("winner");
+        element.classList.add("hidden-winner-text");
+
+        if(counter === 0) {
+            result = randomRotateDegree();
+        }else {
+            result = (3600 * counter + randomRotateDegree());
+        }
+
+        canvas.style.transform = 'rotate(-' + result +'deg)'; 
         setTimeout(() => {
             var element = document.getElementById("winner");
             element.classList.remove("hidden-winner-text");
         }, 6000);
+        // console.log("counter")
+        counter += 1;
     }
 
     $scope.winner = "";

@@ -105,6 +105,11 @@
     
 }
 
+.turntable-content {
+    display: flex;
+    justify-content: center;
+}
+
 .hidden-turntable{
     visibility: hidden;
 }
@@ -114,7 +119,7 @@
 }
 #btn{
     position: absolute;
-    left: 213px;
+    /* left: 213px; */
     top: 120px;
     width: 60px;
     height: 60px;
