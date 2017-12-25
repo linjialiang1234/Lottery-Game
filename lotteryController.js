@@ -11,21 +11,21 @@ mainApp.controller('lotteryController', function($scope) {
 
         drawPieChart();
 
-        // showElement("turntable", "hidden-turntable")();
-        // showElement("btn", "hidden-turntable")();
+        showElement("turntable", "hidden-turntable");
+        showElement("btn", "hidden-turntable");
 
-        var elementTurnTable = document.getElementById("turntable");
-        elementTurnTable.classList.remove("hidden-turntable");
+        // var elementTurnTable = document.getElementById("turntable");
+        // elementTurnTable.classList.remove("hidden-turntable");
 
-        var elementLinkButton = document.getElementById("btn");
-        elementLinkButton.classList.remove("hidden-turntable");
+        // var elementLinkButton = document.getElementById("btn");
+        // elementLinkButton.classList.remove("hidden-turntable");
     } 
 
-        // showElement = function(idOfElement,classOfElement) {
-        //     var elementTurnTable = document.getElementById(idOfElement);
-        //     elementTurnTable.classList.remove(classOfElement);
+    showElement = function(idOfElement,classOfElement) {
+        var getElement = document.getElementById(idOfElement);
+        getElement.classList.remove(classOfElement);
 
-        // }
+    }
 
     getAllInputPercentage = function() {
         var totalInputPercentage = 0;
@@ -105,12 +105,17 @@ mainApp.controller('lotteryController', function($scope) {
 
         canvas.style.transform = 'rotate(-' + result +'deg)'; 
         setTimeout(() => {
-            var element = document.getElementById("winner");
-            element.classList.remove("hidden-winner-text");
+
+            showElement("winner", "hidden-winner-text");
+
+            // var element = document.getElementById("winner");
+            // element.classList.remove("hidden-winner-text");
         }, 6000);
         // console.log("counter")
         counter += 1;
     }
+
+    
 
     $scope.winner = "";
 
