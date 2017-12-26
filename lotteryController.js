@@ -117,14 +117,20 @@ mainApp.controller('lotteryController', function($scope) {
 
     
 
-    $scope.winner = "";
 
     randomRotateDegree = function() {
+        $scope.winner = "";
+
         //get the random number
         var num = parseInt((Math.random()*($scope.inputLists.length)) + 1);
 
-        $scope.winner = $scope.inputLists[num-1].name;
-        console.log("the winner is:" + $scope.winner);
+        decideWinner = function() {
+            $scope.winner = $scope.inputLists[num-1].name;
+            console.log("the winner is:" + $scope.winner);
+        }
+
+        decideWinner();
+
 
         getFinalRoundRotateAngles = function() {
             var finalRoundRotateAngles = 0;
